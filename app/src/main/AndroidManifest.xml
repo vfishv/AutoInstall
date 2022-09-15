@@ -17,7 +17,8 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -28,7 +29,8 @@
             android:name=".AutoInstallService"
             android:label="@string/aby_label"
             android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"
-            android:process=":install">
+            android:process=":install"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.accessibilityservice.AccessibilityService" />
             </intent-filter> 
