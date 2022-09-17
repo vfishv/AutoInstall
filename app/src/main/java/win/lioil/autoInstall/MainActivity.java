@@ -1,15 +1,16 @@
 package win.lioil.autoInstall;
 
 import android.Manifest;
-import android.app.Activity;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.io.File;
 
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
     private static final String TAG = MainActivity.class.getSimpleName();
     private EditText mEditText;
 
