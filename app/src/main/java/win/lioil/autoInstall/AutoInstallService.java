@@ -13,7 +13,7 @@ import java.util.List;
  * 辅助服务自动安装APP，该服务在单独进程中允许
  */
 public class AutoInstallService extends AccessibilityService {
-    private static final String TAG = AutoInstallService.class.getSimpleName();
+    private static final String TAG = "AutoInstallService";
     private static final int DELAY_PAGE = 320; // 页面切换时间
     private final Handler mHandler = new Handler();
 
