@@ -22,10 +22,13 @@ public class MainActivity extends Activity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
             requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 1); // 动态申请读取权限
         InstallUtil.checkSetting(this); // "未知来源"设置
-        AccessibilityUtil.checkSetting(MainActivity.this, AutoInstallService.class); // "辅助功能"设置
     }
 
     public void start(View view) {
         InstallUtil.install(MainActivity.this, new File(mEditText.getText().toString()));
+    }
+
+    public void startService(View view) {
+        AccessibilityUtil.checkSetting(MainActivity.this, AutoInstallService.class); // "辅助功能"设置
     }
 }
